@@ -155,7 +155,20 @@ p {
 }
 
 .hero {
-  background-color: #2f303a;
+  background-color: #c4c4c4;
+}
+
+.overlay {
+  max-width: 1600px;
+  max-height: 600px;
+  background-image: url('../images/hero-bg-image.png');
+  /* background-image: linear-gradient(rgba(47, 48, 58, 0.4)); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero .container {
@@ -224,7 +237,35 @@ p {
 
 .feature-item {
   width: 270px;
-  /* flex-basis: calc(100%-120px / 4); не срабатывает */
+}
+
+.feature-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.feature-icon-one::before {
+  background-image: url('../images/bgfeature1.png');
+}
+
+.feature-icon-two::before {
+  background-image: url('../images/bgfeature2.png');
+}
+
+.feature-icon-three::before {
+  background-image: url('../images/bgfeature3.png');
+}
+
+.feature-icon-four::before {
+  background-image: url('../images/bgfeature4.png');
 }
 
 .title-feature-item,
@@ -235,7 +276,7 @@ p {
 }
 
 .title-feature-item {
-  font-weight: 700;
+  /* font-weight: 700 -бо він автоматично для h1...h6 такий; */
   line-height: 1.14;
   text-transform: uppercase;
   margin-top: 0px;
@@ -250,7 +291,6 @@ p {
 /* Чем мы занимаемся */
 
 .title {
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -263,12 +303,7 @@ p {
   height: 294px;
 }
 
-/* .example-card {
-  display: block;
-  text-decoration: none;
-} */
-
-/* Наша команда */
+/* -----------------Наша команда-------------------- */
 .our-team {
   background-color: #f5f4fa;
   letter-spacing: 0.03em;
@@ -281,6 +316,8 @@ p {
   /* 90px - это 3 margin-right в строке (по 30px) и 30px - это 2 боковых паддинга у контейнера(по 15px) */
   /* 4 - это кол-во элементов в строке */
   padding-bottom: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
 }
 
 .member-name,
@@ -311,9 +348,6 @@ p {
   line-height: 1.71;
   letter-spacing: 0.03em;
   background-color: #2f303a;
-}
-
-.down .container {
 }
 
 .foot .logo-end {
@@ -395,26 +429,6 @@ p {
   border-radius: 4px;
   min-width: 74.08px;
 }
-/* Альтернатива, если бы я не поставила min-width: 74.08px всем кнопкам */
-/* .filter-all {
-  width: 74.08px;
-}
-
-.filter-websites {
-  width: 129.89px;
-}
-
-.filter-apps {
-  width: 147.14px;
-}
-
-.filter-design {
-  width: 104.52px;
-}
-
-.filter-marketing {
-   width: 131.91px; 
-} */
 
 .filters .button:hover {
   background-color: var(--accent-color);
@@ -437,6 +451,13 @@ p {
   margin-bottom: 30px;
 }
 
+.project-item:hover {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .project-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -451,16 +472,9 @@ p {
 
 .project-description {
   padding: 20px 24px;
-  outline: 1px solid #eeeeee;
   text-align: left;
 }
 
-.project-title,
-.project-filter {
-  /* width: 322px;
-  margin-left: auto;
-  margin-right: auto; */
-}
 .project-title {
   font-weight: 700;
   font-size: 18px;
