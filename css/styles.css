@@ -188,8 +188,9 @@ p {
 .overlay {
   max-width: 1600px;
   max-height: 600px;
-  background-image: url('../images/hero-bgi.jpg');
-  /* background-image: linear-gradient(rgba(47, 48, 58, 0.4)); */
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-bgi.jpg');
+  /* linear-gradient(rgba(47, 48, 58, 0.4)), */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -324,8 +325,9 @@ p {
   /* 90px - это 3 margin-right в строке (по 30px) и 30px - это 2 боковых паддинга у контейнера(по 15px) */
   /* 4 - это кол-во элементов в строке */
   padding-bottom: 30px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .member-name,
