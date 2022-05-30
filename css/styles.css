@@ -100,7 +100,6 @@ p {
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-right: 331px;
 }
 
 .nav-list .studio.current,
@@ -125,28 +124,45 @@ p {
   margin-left: auto;
 }
 
+.email-item,
+.telnumber-item {
+  display: flex;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.email-item {
+  width: 161px;
+  margin-right: 50px;
+}
+
+.telnumber-item {
+  width: 142px;
+}
+
 .email,
 .telnumber {
+  display: block;
+  margin: 0;
+  padding: 0;
   color: #757575;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.02em;
   text-decoration: none;
 }
 
-.email {
-  outline: 1px solid tomato;
-  width: 161px;
-  height: 16px;
-  display: block;
-  margin-right: 50px;
+.connect-icon {
+  margin-right: 10px;
+  padding: 0;
+  fill: #757575;
 }
 
-.icon-envelope {
-  display: inline-block;
-  margin-right: 10px;
-  text-align: center;
-  padding: 0;
+.connect-icon:hover {
+  fill: var(--accent-color);
 }
 
 .studio:hover,
@@ -157,19 +173,12 @@ p {
   color: var(--accent-color);
 }
 
-/* .studio:focus,
+.studio:focus,
 .portfolio:focus,
 .contacts:focus,
 .email:focus,
 .telnumber:focus {
   color: var(--accent-color);
-} */
-
-.icon-mobile:before {
-  content: '\e958';
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
 }
 
 .hero {
@@ -257,17 +266,14 @@ p {
   width: 270px;
 }
 
-.feature-item::before {
+.feature-icon {
   display: block;
-  content: '';
+  width: inherit;
   height: 120px;
   margin-bottom: 30px;
   padding: 25px 100px;
-  background-position: center;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-color: #f5f4fa;
   border-radius: 4px;
+  background-color: #f5f4fa;
 }
 
 .feature-icon-one::before {
@@ -376,7 +382,7 @@ p {
 }
 
 .soc-item:hover {
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   border-radius: 50%;
 }
 
@@ -435,7 +441,7 @@ p {
 } */
 
 .customer-link > .icon-fill:hover {
-  fill: #2196f3;
+  fill: var(--accent-color);
 }
 
 /* Футер */
